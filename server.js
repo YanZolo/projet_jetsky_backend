@@ -2,6 +2,17 @@ require('dotenv').config()
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const usersRouter = require('./routes/users.routes')
+const bookingsRouter = require("./routes/bookings.routes");
+
+app.use(express.json())
+app.use('/bookings', bookingsRouter)
+app.use('/users', usersRouter);
+
+
+
+
+
 
 mongoose.connect(process.env.DATA_URL, {useNewUrlParser: true});
 const db = mongoose.connection;
