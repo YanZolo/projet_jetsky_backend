@@ -7,6 +7,15 @@ app.use(express.json())
 const adminRoute = require('./routes/admin.routes')
 app.use('/planes', planesRoute);
 app.use('/admin', adminRoute);
+const usersRouter = require('./routes/users.routes')
+const bookingsRouter = require("./routes/bookings.routes");
+
+app.use(express.json())
+app.use('/bookings', bookingsRouter)
+app.use('/users', usersRouter);
+
+
+
 
 
 
