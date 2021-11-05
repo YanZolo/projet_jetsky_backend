@@ -1,21 +1,29 @@
-<<<<<<< HEAD
-GET http://localhost:8000/planes
+GET http://localhost:8000/bookings
 Content-Type: application/json
 
 ### 
 
-POST http://localhost:8000/admin/addplanes 
+POST http://localhost:8000/bookings
 Content-Type: application/json
 
 {
-    "constructeur": "ishran",
-    "model" : "pakiiiii"
-=======
-POST http://localhost:8000/users/login
+     "from": "gergg",
+     "to" : "AgergMG"
+
+}
+
+### 
+
+DELETE http://localhost:8000/bookings/61850969ce403b20763ccbb5
+Content-Type: application/json
+
+
+###  
+PATCH  http://localhost:8000/bookings/618514a9a47b4ec9c5cd2863
 Content-Type: application/json
 
 {
-    "email" : "theesan@hotmail",
-    "password": "frefgegregrg"
->>>>>>> booking
+     "from": "theesan",
+     "to" : "AMG"
+
 }
