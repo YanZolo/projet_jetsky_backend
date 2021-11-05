@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 GET http://localhost:8000/planes
 Content-Type: application/json
 
@@ -10,12 +9,12 @@ Content-Type: application/json
 {
     "constructeur": "ishran",
     "model" : "pakiiiii"
-=======
+} 
+### 
 POST http://localhost:8000/users/login
 Content-Type: application/json
 
 {
     "email" : "theesan@hotmail",
     "password": "frefgegregrg"
->>>>>>> booking
 }

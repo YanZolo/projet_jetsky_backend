@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const planesRoute = require('./routes/planes.route')
+const planesRoute = require('./routes/planes.routes')
 app.use(express.json())
 const adminRoute = require('./routes/admin.routes')
 app.use('/planes', planesRoute);
