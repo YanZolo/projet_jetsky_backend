@@ -1,21 +1,25 @@
-<<<<<<< HEAD
 GET http://localhost:8000/planes
 Content-Type: application/json
 
 ### 
 
-POST http://localhost:8000/admin/addplanes 
+POST http://localhost:8000/planes 
 Content-Type: application/json
 
 {
-    "constructeur": "ishran",
-    "model" : "pakiiiii"
-=======
-POST http://localhost:8000/users/login
-Content-Type: application/json
-
-{
-    "email" : "theesan@hotmail",
-    "password": "frefgegregrg"
->>>>>>> booking
+    "constructeur": "blablabla",
+    "model" : "tototot"
 }
+
+### 
+
+PUT http://localhost:8000/planes/61850e207d5a6ded9b588a4e
+Content-Type: application/json 
+
+{
+    "constructeur" : "NEW"
+}
+### 
+
+DELETE  http://localhost:8000/planes/61850e207d5a6ded9b588a4e
+Content-Type: application/json 
