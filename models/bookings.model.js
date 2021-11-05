@@ -2,7 +2,32 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const bookingSchema = new Schema({
-    bookingId
+    
+    from: {
+        type: String,
+        require: true,
+    },
+    to: {
+        type: String,
+        require: true,
+    },
+    // departureDateTime: {
+    //     type: Date,
+    //     required: true,
+    // },
+    // arrivalsDateTime: {
+    //     type: Date,
+    //     required: true,
+    // }, 
+    // passager: {
+    //     type: Number,
+    // },
+    // typeOfFlight: {
+    //     type: String,
+    // },
+    // price:{
+    //     type:String
+    // },
 })
 
 
