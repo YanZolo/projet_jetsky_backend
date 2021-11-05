@@ -1,4 +1,4 @@
-const bookingModel = require('../models/booking.model')
+const bookingModel = require('../models/bookings.model')
 
 
 module.exports.getAllBooking = async (req, res) => {
