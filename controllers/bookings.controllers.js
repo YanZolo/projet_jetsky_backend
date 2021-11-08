@@ -25,6 +25,6 @@ module.exports.deleteBooking = async (req, res) => {
 
 module.exports.updateBooking = async (req, res) => {
     await bookingModel.findByIdAndUpdate(req.params.id, req.body)
-        .then(res.status(200).json("Booking updated!"))
+        .then((data)=>res.status(200).json({message:"Booking updated!", data}))
         .catch((err) => res.status(500).json("Error: " + err));
 };

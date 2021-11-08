@@ -25,7 +25,11 @@ module.exports.updatePlane = async (req, res) => {
       const data = await PlaneModel.findByIdAndUpdate(
              req.params.id ,
             {
-                $set: { constructeur: req.body.constructeur }
+                $set: { 
+                    constructeur: req.body.constructeur,
+                    model : req.body.model
+                
+                }
             },
             {
                 new: true,
@@ -40,13 +44,13 @@ module.exports.updatePlane = async (req, res) => {
     }
 };
 
-// module.exports.deletePlane = async (req, res) => {
-//     const plane = await PlaneModel.findByIdAndRemove(
-//         req.params.id)
-//         .then((data)=>  res.status(200).json(data))
-//         .catch((err)=> res.status(500).json(err))1
+module.exports.deletePlane = async (req, res) => {
+    const plane = await PlaneModel.findByIdAndRemove(
+        req.params.id)
+        .then((data)=>  res.status(200).json({message: 'successfully removed :',data}))
+        .catch((err)=> res.status(500).json(err))
 
-// }
+}
 
 
 
