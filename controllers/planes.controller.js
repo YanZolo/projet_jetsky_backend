@@ -1,4 +1,3 @@
-
 const PlaneModel = require('../models/plane.model')
 const ObjectID = require('mongoose').Types.ObjectId
 
@@ -22,8 +21,8 @@ module.exports.updatePlane = async (req, res) => {
     console.log(req.params.id)
     console.log(req.body)
     try {
-      const data = await PlaneModel.findByIdAndUpdate(
-             req.params.id ,
+        const data = await PlaneModel.findByIdAndUpdate(
+            req.params.id,
             {
                 $set: { constructeur: req.body.constructeur }
             },
@@ -32,11 +31,11 @@ module.exports.updatePlane = async (req, res) => {
                 upsert: true,
                 setDefaultsOnInsert: true
             }
-            
+
         )
         res.status(200).json(data)
     } catch (err) {
-        res.status(500).json({message: err.message})
+        res.status(500).json({ message: err.message })
     }
 };
 
