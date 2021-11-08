@@ -1,3 +1,5 @@
+// routes planes
+
 GET http://localhost:8000/planes
 Content-Type: application/json
 
@@ -7,14 +9,49 @@ POST http://localhost:8000/planes
 Content-Type: application/json
 
 {
-    "constructeur": "ishran",
-    "model" : "pakiiiii"
+    "constructeur": "avion 2021",
+    "model" : "konexio"
 } 
+
 ### 
-POST http://localhost:8000/users/login
+PUT http://localhost:8000/planes/6188ebf53a12156e5b272bed
 Content-Type: application/json
 
 {
-    "email" : "theesan@hotmail",
-    "password": "frefgegregrg"
+    "constructeur" : "AVION",
+    "model": "KONEXIO 2021"
 }
+### 
+DELETE http://localhost:8000/planes/61850de04f925f09c6bced22
+Content-Type: application/json
+
+
+// routes booking
+###
+GET http://localhost:8000/bookings
+Content-Type: application/json
+
+
+
+### 
+
+POST http://localhost:8000/bookings 
+Content-Type: application/json
+
+{
+    "from" : "Marseille",
+    "to": "Lyon "
+}
+
+### 
+PATCH http://localhost:8000/bookings/6188edf121a81ce09d4cc7e7
+Content-Type: application/json
+
+{
+    "from" : "Nice",
+    "to": "casablanca  "
+}
+### 
+DELETE http://localhost:8000/bookings/6188edf121a81ce09d4cc7e7
+Content-Type: application/json
+

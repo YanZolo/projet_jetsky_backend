@@ -2,14 +2,38 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const bookingSchema = new Schema({
-    
+
     from: {
-        type: String,
-        require: true,
+        city: {
+            type: String,
+            require: true
+        },
+        location: {
+            latitude: {
+                type: String,
+                require: true
+            },
+            longitude: {
+                type: String,
+                require: true
+            },
+        }
     },
     to: {
-        type: String,
-        require: true,
+        city: {
+            type: String,
+            require: true
+        },
+        location: {
+            latitude: {
+                type: String,
+                require: true
+            },
+            longitude: {
+                type: String,
+                require: true
+            },
+        }
     },
     // departureDateTime: {
     //     type: Date,
