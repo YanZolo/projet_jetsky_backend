@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
-const { Schema } = mongoose;
 
-const bookingSchema = new Schema({
+const bookingSchema = new mongoose.Schema({
 
     from: {
         city: {

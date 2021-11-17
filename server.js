@@ -2,6 +2,8 @@ require('dotenv').config()
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const AirportModel = require('./models/airport.model')
+const dataAirports = require('./utils/airportsData.json')
 
 // routes
 const planesRoutes = require('./routes/planes.routes')
@@ -14,7 +16,7 @@ app.use(express.json())
 app.use(cors())
 
 
-mongoose.connect(process.env.DATA_URL, {useNewUrlParser: true});
+mongoose.connect(process.env.DATA_URL_USER_PASS, {useNewUrlParser: true});
 const db = mongoose.connection;
 db.on('error', (error) => {
     console.error(error)
@@ -22,6 +24,11 @@ db.on('error', (error) => {
 db.once('open', () => {
     console.log('database is connected')
 });
+
+
+
+
+
 
 app.use('/planes', planesRoutes);
 app.use('/bookings', bookingsRoutes)
